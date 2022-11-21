@@ -37,7 +37,7 @@ header nav div div div a {
 }
 
 header nav div div div a, header nav div div div a:visited {
-    color: rgb(145, 90, 255);
+    color: black;
     text-decoration: none;
 }
 
@@ -58,10 +58,12 @@ header nav div div div a, header nav div div div a:visited {
 }
 
 .search-button{
-    height: 2.5rem;
-    width: 140%;
-    font-size: 25px;
+    background-color: rgb(145, 90, 255);
     margin-top: 1rem;
+}
+
+footer a{
+    text-decoration: none;
 }
 
 /* estilos de login */
@@ -112,8 +114,7 @@ header nav div div div a, header nav div div div a:visited {
 }
 
 .login-button input{
-    height: 135%;
-    width: 20%;
+    background-color: rgb(145, 90, 255);
 }
 
 .login-register{
@@ -122,12 +123,16 @@ header nav div div div a, header nav div div div a:visited {
     justify-content: flex-start;
 }
 
+.login-register a{
+    text-decoration: none;
+}
+
 /* estilos de info */
 
 .info{
-    padding: 30px;
+    padding: 3rem;
     text-align: justify;
-    font-size: 25px;
+    font-size: 1.1rem;
 }
 
 .info h2{
@@ -196,7 +201,7 @@ header nav div div div a, header nav div div div a:visited {
 /* estilos de coleccion */
 
 .collection{
-    margin: 15px;
+    margin: 3rem;
     height: 80%;
     display: flex;
     flex-wrap: wrap;
@@ -213,28 +218,89 @@ header nav div div div a, header nav div div div a:visited {
 
 .collection div a img{
     height: 100%;
+    transition: all 0.3s ease-in-out
+}
+
+.collection div a img:hover{
+    transform: scale(1.2);
 }
 
 /* estilos de card info */
 
-.card-info{
-    display: flex;
-    justify-content: space-between;
+.card-info div{
+    margin-top: 3rem;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 5fr 7fr;
+    grid-template-rows: 10% 30% 70%;
+    grid-template-areas: 
+        "img h2"
+        "img p"
+        "img p-text"
+    
 }
 
-.card-info div{
-    margin: 10%;
-    height: 40vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .card-info div img{
-    height: 50vh;
+    width: 60%;
+    grid-area: img;
 }
 
 .card-info div p{
-    padding: 30px;
+    grid-area: p;
 }
 
+.card-info div h2{
+    justify-self: baseline;
+    grid-area: h2;
+}
+
+.card-info div .p-text{
+    grid-area: p-text;
+}
+
+/* mobile */
+
+@media (max-width: 576px){
+
+    /* estilos de card-info */
+
+    .card-info div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .card-info img{
+        margin-top: 3rem;
+    }
+
+    .login{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        border: none;
+    }
+
+    .login h2{
+        text-align: start;
+    }
+
+    .login-input, .login-button{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .login-input input{
+        width: 100%;
+    }
+
+
+}
