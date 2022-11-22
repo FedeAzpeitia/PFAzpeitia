@@ -145,11 +145,13 @@ footer a{
 .support{
     height: 70vh;
     width: 70vw;
-    margin-left: 50px;
+    margin-left: 3rem;
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
+    gap: 1.5rem;
 }
 
 .support-name{
@@ -229,6 +231,7 @@ footer a{
 
 .card-info div{
     margin-top: 3rem;
+    margin-right: 3rem;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -260,7 +263,7 @@ footer a{
     grid-area: p-text;
 }
 
-/* mobile */
+/* mq */
 
 @media (max-width: 576px){
 
