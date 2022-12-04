@@ -1,0 +1,24 @@
+/* estilos de coleccion */
+
+.collection{
+    margin: 3rem;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 15px;
+    div{
+        height: 50%;
+        width: 25%;
+        display: flex;
+        a{
+            img{
+                height: 100%;
+                transition: all 0.3s ease-in-out;
+            }
+            img:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+}

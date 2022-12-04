@@ -1,0 +1,23 @@
+/* buscador */
+
+.searcher{
+    height: 80vh;
+    @include flex-column;
+    .search-bar{
+        width: 60vw;
+        height: 7vh;
+        font-size: 1.2em;
+    }
+    div{
+        .search-button{
+            background-color: $button-color;
+            margin-top: 1rem;
+        }
+    }
+}
+
+footer{
+    a{
+        text-decoration: none;
+    }
+}

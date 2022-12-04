@@ -1,0 +1,47 @@
+/* estilos de support */
+
+main{
+    .support{
+        height: 70vh;
+        width: 70vw;
+        margin-left: 3rem;
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 1.5rem;
+        .support-name{
+            @include space-between;
+            input{
+                height: 130%;
+                width: 63%;
+            }
+        }
+        .support-mail{
+            @include space-between;
+            input{
+                height: 130%;
+                width: 63%;
+            }
+        }
+        .support-question{
+            @include space-between;
+            textarea{
+                font-size: 110%;
+                height: 110%;
+                width: 63%;
+                resize: none;
+            }
+        }
+        .support-button{
+            width: 80%;
+            display: flex;
+            justify-content: end;
+            input{
+                height: 135%;
+                width: 15%;
+            }
+        }
+    }
+}

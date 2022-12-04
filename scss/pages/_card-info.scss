@@ -1,0 +1,41 @@
+/* estilos de card-info */
+
+.card-info{
+    div{
+        margin-top: 3rem;
+        margin-right: 3rem;
+        @include grid;
+        grid-template-columns: 5fr 7fr;
+        grid-template-rows: 10% 30% 70%;
+        grid-template-areas: 
+            "img h2"
+            "img p"
+            "img p-text";
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+        img{
+            width: 60%;
+            @include grid-area(img);
+            @include mobile{
+                margin-top: 3rem;
+            }
+        }
+        p{
+            @include grid-area(p)
+        }
+        h2{
+            justify-self: baseline;
+            @include grid-area(h2)
+        }
+        .p-text{
+            @include grid-area(p-text)
+        }
+    }
+    
+}

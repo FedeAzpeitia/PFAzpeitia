@@ -1,0 +1,53 @@
+// imports
+
+@import "utilities/variables";
+@import "utilities/mixin";
+@import "utilities/extend";
+@import "pages/index";
+@import "pages/about";
+@import "pages/card-info";
+@import "pages/coleccion";
+@import "pages/login";
+@import "pages/support";
+
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    @extend %full-page-height;
+}
+
+body{
+    @extend %full-page-height;
+}
+
+/* menu de navegacion */
+
+header{
+    @include nav;
+    nav{
+        div{
+            background-color: $navbar-color;
+            div{
+                div{
+                    a{
+                        @extend %link;
+                        margin: 5px;
+                        padding: 6px 10px;
+                    }
+                    a:visited{
+                        @extend %link;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
