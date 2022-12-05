@@ -15,7 +15,7 @@ header nav div div div a, header nav div div div a:visited {
   justify-content: center; }
   .searcher .search-bar {
     width: 60vw;
-    height: 7vh;
+    height: 2.5em;
     font-size: 1.2em; }
   .searcher div .search-button {
     background-color: #915aff;
@@ -45,9 +45,11 @@ footer a {
   grid-template-areas: "img h2" "img p" "img p-text"; }
   @media (max-width: 576px) {
     .card-info div {
+      margin: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       gap: 1rem;
       padding-left: 3rem;
       padding-right: 3rem; } }
@@ -58,12 +60,14 @@ footer a {
       .card-info div img {
         margin-top: 3rem; } }
   .card-info div p {
-    grid-area: p; }
+    grid-area: p;
+    text-align: justify; }
   .card-info div h2 {
     justify-self: baseline;
     grid-area: h2; }
   .card-info div .p-text {
-    grid-area: p-text; }
+    grid-area: p-text;
+    text-align: justify; }
 
 /* estilos de coleccion */
 .collection {
@@ -72,16 +76,16 @@ footer a {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  gap: 15px; }
+  gap: 0.5rem; }
   .collection div {
-    height: 50%;
-    width: 25%;
-    display: flex; }
+    margin-bottom: 1rem;
+    width: fit-content; }
     .collection div a img {
+      width: 18vw;
       height: 100%;
       transition: all 0.3s ease-in-out; }
     .collection div a img:hover {
-      transform: scale(1.2); }
+      transform: scale(1.1); }
 
 /* estilos de login */
 .login-main {
@@ -91,16 +95,17 @@ footer a {
   align-items: center;
   justify-content: center; }
   .login-main .login {
+    border-radius: 40px;
     padding: 30px;
     height: 70%;
     width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border: 3px solid black; }
+    border: 1px solid black; }
     @media (max-width: 576px) {
       .login-main .login {
-        height: 100vh;
+        height: 70vh;
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -127,6 +132,7 @@ footer a {
       font-size: 17px; }
       @media (max-width: 576px) {
         .login-main .login-input input {
+          height: 3rem;
           width: 100%; } }
     .login-main .login-input input::placeholder {
       color: lightgray; }
@@ -137,7 +143,8 @@ footer a {
       align-items: flex-start;
       gap: 1rem; } }
   .login-main .login-button input {
-    background-color: #915aff; }
+    background-color: #915aff;
+    height: 3rem; }
 
 .login-register {
   width: 55%;

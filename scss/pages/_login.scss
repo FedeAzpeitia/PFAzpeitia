@@ -4,15 +4,16 @@
     height: 80vh;
     @include flex-column;
     .login{
+        border-radius: 40px;
         padding: 30px;
         height: 70%;
         width: 55%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        border: 3px solid black;
+        border: 1px solid black;
         @include mobile{
-            height: 100vh;
+            height: 70vh;
             width: 100vw;
             display: flex;
             flex-direction: column;
@@ -41,6 +42,7 @@
                 width: 70%;
                 font-size: 17px;
                 @include mobile{
+                    height: 3rem;
                     width: 100%;
                 }
             }
@@ -57,6 +59,7 @@
             }
             input{
                 background-color: $button-color;
+                height: 3rem;
             }
             }
         }

@@ -12,9 +12,11 @@
             "img p"
             "img p-text";
         @include mobile{
+            margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             gap: 1rem;
             padding-left: 3rem;
             padding-right: 3rem;
@@ -27,14 +29,16 @@
             }
         }
         p{
-            @include grid-area(p)
+            @include grid-area(p);
+            text-align: justify;
         }
         h2{
             justify-self: baseline;
-            @include grid-area(h2)
+            @include grid-area(h2);
         }
         .p-text{
-            @include grid-area(p-text)
+            @include grid-area(p-text);
+            text-align: justify;
         }
     }
     

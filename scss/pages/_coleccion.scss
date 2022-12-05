@@ -6,18 +6,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
-    gap: 15px;
+    gap: 0.5rem;
     div{
-        height: 50%;
-        width: 25%;
-        display: flex;
+        margin-bottom: 1rem;
+        width: fit-content;
         a{
             img{
+                width: 18vw;
                 height: 100%;
                 transition: all 0.3s ease-in-out;
             }
             img:hover{
-                transform: scale(1.2);
+                transform: scale(1.1);
             }
         }
     }
