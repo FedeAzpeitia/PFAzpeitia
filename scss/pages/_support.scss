@@ -11,37 +11,76 @@ main{
         justify-content: space-evenly;
         align-items: flex-start;
         gap: 1.5rem;
+        @include mobile{
+            width: 100vw;
+        }
         .support-name{
             @include space-between;
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+            }
             input{
-                height: 130%;
+                height: 3rem;
                 width: 63%;
+                @include mobile{
+                    width: 100%
+                }
+            }
+            input:hover{
+                box-shadow: 2px 2px 7px -2px $text-color;
             }
         }
         .support-mail{
             @include space-between;
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+            }
             input{
-                height: 130%;
+                height: 3rem;
                 width: 63%;
+                @include mobile{
+                    width: 100%
+                }
+            }
+            input:hover{
+                box-shadow: 2px 2px 7px -2px $text-color;
             }
         }
         .support-question{
             @include space-between;
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+            }
             textarea{
                 font-size: 110%;
                 height: 110%;
                 width: 63%;
                 resize: none;
+                @include mobile{
+                    width: 100%
+                }
+            }
+            textarea:hover{
+                box-shadow: 2px 2px 7px -2px $text-color;
             }
         }
         .support-button{
             width: 80%;
             display: flex;
             justify-content: end;
-            input{
-                height: 135%;
-                width: 15%;
+            button{
+                margin-top: 1rem;
+                height: 3rem;
+                width: 5rem;
+                background-color: $button-color;
+                }
+            button:hover{
+                box-shadow: 2px 2px 7px -2px $text-color;
+            }
             }
         }
     }
-}
+

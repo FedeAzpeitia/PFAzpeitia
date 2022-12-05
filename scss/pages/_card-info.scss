@@ -6,9 +6,10 @@
         margin-right: 3rem;
         @include grid;
         grid-template-columns: 5fr 7fr;
-        grid-template-rows: 10% 30% 70%;
+        grid-template-rows: 10% 10% 20% 50%;
         grid-template-areas: 
             "img h2"
+            "img h3"
             "img p"
             "img p-text";
         @include mobile{
@@ -35,6 +36,10 @@
         h2{
             justify-self: baseline;
             @include grid-area(h2);
+        }
+        h3{
+            justify-self: baseline;
+            @include grid-area(h3)
         }
         .p-text{
             @include grid-area(p-text);

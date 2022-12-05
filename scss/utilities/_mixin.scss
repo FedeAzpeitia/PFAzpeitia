@@ -26,10 +26,10 @@
 //navbar
 
 @mixin nav{
-    height: 15vh;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
-    background-color: rgb(186, 155, 247);   
+    background-color: $navbar-color;   
 }
 
 //media querys

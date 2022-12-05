@@ -1,9 +1,12 @@
 html, body {
   height: 100vh;
-  background-color: #d9c6fe; }
+  background-color: #FFECDA; }
+  @media (max-width: 576px) {
+    html, body {
+      height: 80vh; } }
 
 header nav div div div a, header nav div div div a:visited {
-  color: black;
+  color: #414042;
   text-decoration: none; }
 
 /* buscador */
@@ -17,12 +20,21 @@ header nav div div div a, header nav div div div a:visited {
     width: 60vw;
     height: 2.5em;
     font-size: 1.2em; }
+  .searcher .search-bar:hover {
+    box-shadow: 2px 2px 7px -2px #414042; }
   .searcher div .search-button {
-    background-color: #915aff;
+    background-color: #db5f00;
     margin-top: 1rem; }
+  .searcher div .search-button:hover {
+    box-shadow: 2px 2px 7px -2px #414042; }
 
-footer a {
-  text-decoration: none; }
+footer {
+  height: 5vh; }
+  footer a {
+    text-decoration: none;
+    color: #414042; }
+  footer a:visited {
+    color: #414042; }
 
 /* estilos de info */
 .info {
@@ -32,6 +44,12 @@ footer a {
   .info h2 {
     margin: 20px 0;
     padding: 15px 0; }
+  .info div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem; }
 
 /* estilos de card-info */
 .card-info div {
@@ -41,8 +59,8 @@ footer a {
   justify-items: center;
   align-items: center;
   grid-template-columns: 5fr 7fr;
-  grid-template-rows: 10% 30% 70%;
-  grid-template-areas: "img h2" "img p" "img p-text"; }
+  grid-template-rows: 10% 10% 20% 50%;
+  grid-template-areas: "img h2" "img h3" "img p" "img p-text"; }
   @media (max-width: 576px) {
     .card-info div {
       margin: 0;
@@ -65,6 +83,9 @@ footer a {
   .card-info div h2 {
     justify-self: baseline;
     grid-area: h2; }
+  .card-info div h3 {
+    justify-self: baseline;
+    grid-area: h3; }
   .card-info div .p-text {
     grid-area: p-text;
     text-align: justify; }
@@ -77,13 +98,17 @@ footer a {
   flex-wrap: wrap;
   justify-content: start;
   gap: 0.5rem; }
+  @media (max-width: 576px) {
+    .collection {
+      margin: 1rem; } }
   .collection div {
-    margin-bottom: 1rem;
-    width: fit-content; }
+    margin-bottom: 1rem; }
     .collection div a img {
       width: 18vw;
-      height: 100%;
       transition: all 0.3s ease-in-out; }
+      @media (max-width: 576px) {
+        .collection div a img {
+          width: 45vw; } }
     .collection div a img:hover {
       transform: scale(1.1); }
 
@@ -102,7 +127,7 @@ footer a {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border: 1px solid black; }
+    border: 1px solid #414042; }
     @media (max-width: 576px) {
       .login-main .login {
         height: 70vh;
@@ -134,6 +159,8 @@ footer a {
         .login-main .login-input input {
           height: 3rem;
           width: 100%; } }
+    .login-main .login-input input:hover {
+      box-shadow: 2px 2px 7px -2px #414042; }
     .login-main .login-input input::placeholder {
       color: lightgray; }
   @media (max-width: 576px) {
@@ -143,8 +170,10 @@ footer a {
       align-items: flex-start;
       gap: 1rem; } }
   .login-main .login-button input {
-    background-color: #915aff;
+    background-color: #db5f00;
     height: 3rem; }
+  .login-main .login-button input:hover {
+    box-shadow: 2px 2px 7px -2px #414042; }
 
 .login-register {
   width: 55%;
@@ -164,36 +193,70 @@ main .support {
   justify-content: space-evenly;
   align-items: flex-start;
   gap: 1.5rem; }
+  @media (max-width: 576px) {
+    main .support {
+      width: 100vw; } }
   main .support .support-name {
     width: 80%;
     display: flex;
     justify-content: space-between; }
+    @media (max-width: 576px) {
+      main .support .support-name {
+        display: flex;
+        flex-direction: column; } }
     main .support .support-name input {
-      height: 130%;
+      height: 3rem;
       width: 63%; }
+      @media (max-width: 576px) {
+        main .support .support-name input {
+          width: 100%; } }
+    main .support .support-name input:hover {
+      box-shadow: 2px 2px 7px -2px #414042; }
   main .support .support-mail {
     width: 80%;
     display: flex;
     justify-content: space-between; }
+    @media (max-width: 576px) {
+      main .support .support-mail {
+        display: flex;
+        flex-direction: column; } }
     main .support .support-mail input {
-      height: 130%;
+      height: 3rem;
       width: 63%; }
+      @media (max-width: 576px) {
+        main .support .support-mail input {
+          width: 100%; } }
+    main .support .support-mail input:hover {
+      box-shadow: 2px 2px 7px -2px #414042; }
   main .support .support-question {
     width: 80%;
     display: flex;
     justify-content: space-between; }
+    @media (max-width: 576px) {
+      main .support .support-question {
+        display: flex;
+        flex-direction: column; } }
     main .support .support-question textarea {
       font-size: 110%;
       height: 110%;
       width: 63%;
       resize: none; }
+      @media (max-width: 576px) {
+        main .support .support-question textarea {
+          width: 100%; } }
+    main .support .support-question textarea:hover {
+      box-shadow: 2px 2px 7px -2px #414042; }
   main .support .support-button {
     width: 80%;
     display: flex;
     justify-content: end; }
-    main .support .support-button input {
-      height: 135%;
-      width: 15%; }
+    main .support .support-button button {
+      margin-top: 1rem;
+      height: 3rem;
+      width: 5rem;
+      background-color: #db5f00; }
+    main .support .support-button button:hover {
+      box-shadow: 2px 2px 7px -2px #414042; }
 
 /* reset */
 * {
@@ -203,12 +266,14 @@ main .support {
 
 /* menu de navegacion */
 header {
-  height: 15vh;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
-  background-color: #ba9bf7; }
+  background-color: #F79449; }
   header nav div {
-    background-color: #ba9bf7; }
+    background-color: #F79449; }
+    header nav div div a .logo {
+      height: 6vh; }
     header nav div div div a {
       margin: 5px;
       padding: 6px 10px; }

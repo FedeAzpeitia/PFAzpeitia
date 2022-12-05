@@ -3,11 +3,14 @@
 %full-page-height{
     height: 100vh;
     background-color: $background-color;
+    @include mobile{
+        height: 80vh;
+    }
 }
 
 // link
 
 %link{
-    color: black;
+    color: $text-color;
     text-decoration: none;
 }

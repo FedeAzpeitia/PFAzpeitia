@@ -8,4 +8,8 @@
         margin: 20px 0;
         padding: 15px 0;
     }
+    div{
+        @include flex-column;
+        gap: 1.5rem;
+    }
 }

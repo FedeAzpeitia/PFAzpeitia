@@ -34,6 +34,11 @@ header{
         div{
             background-color: $navbar-color;
             div{
+                a{
+                    .logo{
+                        height: 6vh;
+                    }
+                }
                 div{
                     a{
                         @extend %link;
