@@ -5,8 +5,8 @@
         margin-top: 3rem;
         margin-right: 3rem;
         @include grid;
-        grid-template-columns: 5fr 7fr;
-        grid-template-rows: 10% 10% 20% 50%;
+        grid-template-columns: 4fr 4fr;
+        grid-template-rows: 10% 5% 40% 40%;
         grid-template-areas: 
             "img h2"
             "img h3"
@@ -39,11 +39,13 @@
         }
         h3{
             justify-self: baseline;
-            @include grid-area(h3)
+            @include grid-area(h3);
+            font-size: medium
         }
         .p-text{
             @include grid-area(p-text);
             text-align: justify;
+            font-style: italic;
         }
     }
     

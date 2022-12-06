@@ -58,8 +58,8 @@ footer {
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-columns: 5fr 7fr;
-  grid-template-rows: 10% 10% 20% 50%;
+  grid-template-columns: 4fr 4fr;
+  grid-template-rows: 10% 5% 40% 40%;
   grid-template-areas: "img h2" "img h3" "img p" "img p-text"; }
   @media (max-width: 576px) {
     .card-info div {
@@ -85,10 +85,12 @@ footer {
     grid-area: h2; }
   .card-info div h3 {
     justify-self: baseline;
-    grid-area: h3; }
+    grid-area: h3;
+    font-size: medium; }
   .card-info div .p-text {
     grid-area: p-text;
-    text-align: justify; }
+    text-align: justify;
+    font-style: italic; }
 
 /* estilos de coleccion */
 .collection {
@@ -100,15 +102,17 @@ footer {
   gap: 0.5rem; }
   @media (max-width: 576px) {
     .collection {
-      margin: 1rem; } }
+      margin: 1rem;
+      justify-content: center; } }
   .collection div {
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    height: 44vh; }
+    @media (max-width: 576px) {
+      .collection div {
+        height: 50vh; } }
     .collection div a img {
-      width: 18vw;
+      height: 100%;
       transition: all 0.3s ease-in-out; }
-      @media (max-width: 576px) {
-        .collection div a img {
-          width: 45vw; } }
     .collection div a img:hover {
       transform: scale(1.1); }
 
