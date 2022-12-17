@@ -11,13 +11,14 @@ header nav div div div a, header nav div div div a:visited {
 
 /* buscador */
 .searcher {
+  margin: 2rem 2rem 0 2rem;
   height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
   .searcher .search-bar {
-    width: 60vw;
+    max-width: 50rem;
     height: 2.5em;
     font-size: 1.2em; }
   .searcher .search-bar:hover {
@@ -31,10 +32,7 @@ header nav div div div a, header nav div div div a:visited {
 footer {
   height: 5vh; }
   footer a {
-    text-decoration: none;
-    color: #414042; }
-  footer a:visited {
-    color: #414042; }
+    text-decoration: none; }
 
 /* estilos de info */
 .info {
@@ -59,36 +57,36 @@ footer {
     height: 80vh;
     width: 70vw;
     margin-top: 2rem;
-    padding: 2rem;
+    padding: 3rem;
     background-color: #ffefe0;
     border: 1px solid rgba(171, 171, 171, 0.312);
     border-radius: 40px;
     box-shadow: 13px 14px 43px -17px rgba(0, 0, 0, 0.68);
-    -webkit-box-shadow: 13px 14px 43px -17px rgba(0, 0, 0, 0.68);
-    -moz-box-shadow: 13px 14px 43px -17px rgba(0, 0, 0, 0.68);
     display: grid;
     justify-items: center;
     align-items: center;
     grid-template-columns: 6fr 6fr;
     grid-template-rows: 10% 5% 30% 30% 20%;
     grid-template-areas: "img h2" "img h3" "img p" "img p-text" "img p-text-dos"; }
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       .card-info div {
-        margin: 0;
+        height: 100vh;
+        margin-top: 2rem;
+        padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         gap: 1rem;
-        padding-left: 3rem;
-        padding-right: 3rem; } }
+        box-shadow: none;
+        background-color: #FFECDA;
+        border: none; } }
     .card-info div img {
       width: 70%;
       box-shadow: 2px 2px 7px -4px #414042;
       grid-area: img; }
       @media (max-width: 576px) {
         .card-info div img {
-          margin-top: 3rem; } }
+          width: 90%; } }
     .card-info div p {
       grid-area: p;
       text-align: justify; }
@@ -109,27 +107,37 @@ footer {
 
 /* estilos de coleccion */
 .collection {
-  margin: 3rem;
-  height: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  gap: 0.5rem; }
+  margin: 2rem 5rem 0 5rem;
+  height: 80%; }
+  @media (max-width: 768px) {
+    .collection {
+      margin: 2rem 3rem 0 3rem; } }
   @media (max-width: 576px) {
     .collection {
       margin: 1rem;
       justify-content: center; } }
   .collection div {
-    margin-bottom: 1rem;
-    height: 44vh; }
-    @media (max-width: 576px) {
-      .collection div {
-        height: 50vh; } }
-    .collection div a img {
-      height: 100%;
-      transition: all 0.3s ease-in-out; }
-    .collection div a img:hover {
-      transform: scale(1.1); }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%; }
+    .collection div div {
+      justify-items: stretch;
+      width: 19%;
+      min-width: 190px;
+      margin-bottom: 1rem; }
+      @media (max-width: 768px) {
+        .collection div div {
+          width: 22%; } }
+      @media (max-width: 576px) {
+        .collection div div {
+          width: 45%; } }
+      .collection div div a img {
+        width: 100%;
+        transition: all 0.3s ease-in-out; }
+      .collection div div a img:hover {
+        transform: scale(1.1); }
 
 /* estilos de login */
 .login-main {
@@ -147,6 +155,10 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     border: 1px solid #414042; }
+    @media (max-width: 768px) {
+      .login-main .login {
+        width: 90vw;
+        margin: 0 1rem; } }
     @media (max-width: 576px) {
       .login-main .login {
         height: 70vh;
@@ -195,16 +207,17 @@ footer {
     box-shadow: 2px 2px 7px -2px #414042; }
 
 .login-register {
-  width: 55%;
+  width: 100%;
   display: flex;
-  justify-content: flex-start; }
+  justify-content: center; }
   .login-register a {
     text-decoration: none; }
 
 /* estilos de support */
 main .support {
+  padding-left: 2rem;
   height: 70vh;
-  width: 70vw;
+  width: 90vw;
   margin-left: 3rem;
   margin-top: 4rem;
   display: flex;
@@ -214,7 +227,8 @@ main .support {
   gap: 1.5rem; }
   @media (max-width: 576px) {
     main .support {
-      width: 100vw; } }
+      padding: 0;
+      width: 85vw; } }
   main .support .support-name {
     width: 80%;
     display: flex;
@@ -223,10 +237,18 @@ main .support {
       main .support .support-name {
         display: flex;
         flex-direction: column; } }
+    @media (max-width: 768px) {
+      main .support .support-name {
+        width: 90%;
+        display: flex;
+        flex-direction: column; } }
     main .support .support-name input {
       height: 3rem;
       width: 63%; }
       @media (max-width: 576px) {
+        main .support .support-name input {
+          width: 100%; } }
+      @media (max-width: 768px) {
         main .support .support-name input {
           width: 100%; } }
     main .support .support-name input:hover {
@@ -239,10 +261,18 @@ main .support {
       main .support .support-mail {
         display: flex;
         flex-direction: column; } }
+    @media (max-width: 768px) {
+      main .support .support-mail {
+        width: 90%;
+        display: flex;
+        flex-direction: column; } }
     main .support .support-mail input {
       height: 3rem;
       width: 63%; }
       @media (max-width: 576px) {
+        main .support .support-mail input {
+          width: 100%; } }
+      @media (max-width: 768px) {
         main .support .support-mail input {
           width: 100%; } }
     main .support .support-mail input:hover {
@@ -255,12 +285,19 @@ main .support {
       main .support .support-question {
         display: flex;
         flex-direction: column; } }
+    @media (max-width: 768px) {
+      main .support .support-question {
+        width: 90%;
+        display: flex;
+        flex-direction: column; } }
     main .support .support-question textarea {
-      font-size: 110%;
       height: 110%;
       width: 63%;
       resize: none; }
       @media (max-width: 576px) {
+        main .support .support-question textarea {
+          width: 100%; } }
+      @media (max-width: 768px) {
         main .support .support-question textarea {
           width: 100%; } }
     main .support .support-question textarea:hover {
@@ -269,6 +306,9 @@ main .support {
     width: 80%;
     display: flex;
     justify-content: end; }
+    @media (max-width: 768px) {
+      main .support .support-button {
+        width: 90%; } }
     main .support .support-button button {
       margin-top: 1rem;
       height: 3rem;

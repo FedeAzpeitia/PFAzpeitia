@@ -36,12 +36,12 @@
 
 @mixin mobile{
     @media (max-width: 576px){
-        @content
+        @content;
     }
 }
 
 @mixin tablet{
     @media (max-width: 768px){
-        
+        @content
     }
 }

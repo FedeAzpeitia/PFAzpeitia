@@ -12,6 +12,10 @@
         flex-direction: column;
         justify-content: space-around;
         border: 1px solid $text-color;
+        @include tablet{
+            width: 90vw;
+            margin: 0 1rem;
+        }
         @include mobile{
             height: 70vh;
             width: 100vw;
@@ -70,9 +74,9 @@
             }
         }
         .login-register{
-            width: 55%;
+            width: 100%;
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             a{
                 text-decoration: none;
             }

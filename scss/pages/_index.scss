@@ -1,10 +1,11 @@
 /* buscador */
 
 .searcher{
+    margin: 2rem 2rem 0 2rem;
     height: 80vh;
     @include flex-column;
     .search-bar{
-        width: 60vw;
+        max-width: 50rem;
         height: 2.5em;
         font-size: 1.2em;
     }
@@ -26,9 +27,5 @@ footer{
     height: 5vh;
     a{
         text-decoration: none;
-        color: $text-color;
-    }
-    a:visited{
-        color: $text-color;
     }
 }
