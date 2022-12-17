@@ -1,17 +1,28 @@
 /* estilos de card-info */
 
 .card-info{
+    display: flex;
+    justify-content: center;
     div{
-        margin-top: 3rem;
-        margin-right: 3rem;
+        height: 80vh;
+        width: 70vw;
+        margin-top: 2rem;
+        padding: 2rem;
+        background-color: $background-color-light;
+        border: 1px solid rgba(171, 171, 171, 0.312);
+        border-radius: 40px;
+        box-shadow: 13px 14px 43px -17px rgba(0,0,0,0.68);
+        -webkit-box-shadow: 13px 14px 43px -17px rgba(0,0,0,0.68);
+        -moz-box-shadow: 13px 14px 43px -17px rgba(0,0,0,0.68);
         @include grid;
-        grid-template-columns: 4fr 4fr;
-        grid-template-rows: 10% 5% 40% 40%;
+        grid-template-columns: 6fr 6fr;
+        grid-template-rows: 10% 5% 30% 30% 20%;
         grid-template-areas: 
             "img h2"
             "img h3"
             "img p"
-            "img p-text";
+            "img p-text"
+            "img p-text-dos";
         @include mobile{
             margin: 0;
             display: flex;
@@ -23,7 +34,8 @@
             padding-right: 3rem;
         }
         img{
-            width: 60%;
+            width: 70%;
+            box-shadow: 2px 2px 7px -4px $text-color;
             @include grid-area(img);
             @include mobile{
                 margin-top: 3rem;
@@ -46,6 +58,10 @@
             @include grid-area(p-text);
             text-align: justify;
             font-style: italic;
+        }
+        .p-text-dos{
+            @include grid-area(p-text-dos);
+            text-align: justify;
         }
     }
     

@@ -52,45 +52,60 @@ footer {
     gap: 1.5rem; }
 
 /* estilos de card-info */
-.card-info div {
-  margin-top: 3rem;
-  margin-right: 3rem;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  grid-template-columns: 4fr 4fr;
-  grid-template-rows: 10% 5% 40% 40%;
-  grid-template-areas: "img h2" "img h3" "img p" "img p-text"; }
-  @media (max-width: 576px) {
-    .card-info div {
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      padding-left: 3rem;
-      padding-right: 3rem; } }
-  .card-info div img {
-    width: 60%;
-    grid-area: img; }
+.card-info {
+  display: flex;
+  justify-content: center; }
+  .card-info div {
+    height: 80vh;
+    width: 70vw;
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #ffefe0;
+    border: 1px solid rgba(171, 171, 171, 0.312);
+    border-radius: 40px;
+    box-shadow: 13px 14px 43px -17px rgba(0, 0, 0, 0.68);
+    -webkit-box-shadow: 13px 14px 43px -17px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 13px 14px 43px -17px rgba(0, 0, 0, 0.68);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 6fr 6fr;
+    grid-template-rows: 10% 5% 30% 30% 20%;
+    grid-template-areas: "img h2" "img h3" "img p" "img p-text" "img p-text-dos"; }
     @media (max-width: 576px) {
-      .card-info div img {
-        margin-top: 3rem; } }
-  .card-info div p {
-    grid-area: p;
-    text-align: justify; }
-  .card-info div h2 {
-    justify-self: baseline;
-    grid-area: h2; }
-  .card-info div h3 {
-    justify-self: baseline;
-    grid-area: h3;
-    font-size: medium; }
-  .card-info div .p-text {
-    grid-area: p-text;
-    text-align: justify;
-    font-style: italic; }
+      .card-info div {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding-left: 3rem;
+        padding-right: 3rem; } }
+    .card-info div img {
+      width: 70%;
+      box-shadow: 2px 2px 7px -4px #414042;
+      grid-area: img; }
+      @media (max-width: 576px) {
+        .card-info div img {
+          margin-top: 3rem; } }
+    .card-info div p {
+      grid-area: p;
+      text-align: justify; }
+    .card-info div h2 {
+      justify-self: baseline;
+      grid-area: h2; }
+    .card-info div h3 {
+      justify-self: baseline;
+      grid-area: h3;
+      font-size: medium; }
+    .card-info div .p-text {
+      grid-area: p-text;
+      text-align: justify;
+      font-style: italic; }
+    .card-info div .p-text-dos {
+      grid-area: p-text-dos;
+      text-align: justify; }
 
 /* estilos de coleccion */
 .collection {
